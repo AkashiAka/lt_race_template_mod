@@ -122,7 +122,7 @@
 	
 	<!-- 这个亚种的图标背景的名字，应该是同名文件夹下的svg文件
 	 	 留空代表使用默认-->
-	<backgroundName>background_spotted</backgroundName>
+	<backgroundName>background</backgroundName>
 	
 	<!-- Book information:
 	Books are automatically-generated items which reveal information about the game's subspecies.
