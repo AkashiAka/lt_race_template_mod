@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tentacle>
+
+	<!-- 种族id -->
+	<race>author_raceName</race>
+
+	<!-- 种族部件转化时候显示的名称 一般是 种族名称 -->
+	<transformationName><![CDATA[种族名称]]></transformationName>
+
+	<!-- 参考原版coveringType 可以填	皮肤coveringTypes
+	如果要自定义
+	皮肤覆盖id 推荐命名 作者_种族名字_skin 其中“作者_种族名字”与race文件中的相同
+	需要coveringTypes(没有这个文件夹自己创建)中建立并填写skin.xml文件
+	 -->
+	<coveringType>innoxia_hyena_fur</coveringType>
+
+	<!-- 初始触手粗细，范围0~7，推荐范围0~6（超出可能报错）
+	0 "细小"
+	1 "纤细"
+	2 "较细"
+	3 "平均直径"
+	4 "较粗"
+	5 "粗大"
+	6 "粗壮"
+	7 "极粗"
+	-->
+	<defaultGirth>4</defaultGirth>
+
+	<!-- 初始触手长度与身高的比例(尾巴/身高) 最小 0.05 最大 2.5 -->
+	<defaultLengthAsPercentageOfHeight>2.5</defaultLengthAsPercentageOfHeight>
+
+	<!-- 触手tag：
+	用<tag>间隔
+	TAIL_PREHENSILE 尾巴灵活，可以抓东西
+	TAIL_SLEEP_HUGGING 抱着尾巴睡觉
+	TAIL_NEVER_SUITABLE_FOR_PENETRATION 尾巴不适合穿孔
+	TAIL_SUITABLE_FOR_PENETRATION 尾巴适合穿孔（毛茸茸的尾巴禁止）
+	TAIL_ATTACK 尾巴武器
+	TAIL_VENOMOUS_STING 尾巴毒刺
+	TAIL_OVIPOSITOR 尾巴产卵器
+	TAIL_TYPE_SKIN 尾巴覆盖光滑皮肤
+	TAIL_TYPE_SCALES 尾巴覆盖鳞片
+	TAIL_TYPE_FUR 尾巴上有皮毛
+	TAIL_TYPE_TUFT 尾巴末端有一束毛发
+	TAIL_TYPE_HAIR 尾巴上有毛发
+	TAIL_TYPE_FEATHER 尾巴上有羽毛
+	TAIL_TAPERING_EXPONENTIAL 尾巴直至末端迅速变细
+	TAIL_TAPERING_LINEAR 尾巴直至末端慢慢变细
+	TAIL_TAPERING_BULBOUS 尾巴不断变粗，然后逐渐变细变成球形或者椭圆形
+	TAIL_TAPERING_NONE 尾巴不会逐渐变细
+	!!!注意!!!
+	至少要定义一个TAIL_TYPE类型和一个TAIL_TAPERING类型的tag
+	-->
+	<tags>
+		<tag>TAIL_TAPERING_NONE</tag>
+		<tag>TAIL_SUTABLE_FOR_PENETRATION</tag>
+		<tag>TAIL_PREHENSILE</tag>
+		<tag>TAIL_SLEEP_HUGGING</tag>
+	</tags>
+
+	<!-- 限定词定义(一般为空) -->
+	<determiner><![CDATA[]]></determiner>
+	<determinerPlural><![CDATA[]]></determinerPlural>
+
+	<!-- 单数名称 -->
+	<name><![CDATA[tentacle]]></name>
+	<!-- 复数名称 -->
+	<namePlural><![CDATA[tentacles]]></namePlural>
+
+	<!-- 对男性的描述 -->
+	<descriptorsMasculine>
+		<descriptor>strong</descriptor>
+	</descriptorsMasculine>
+	<!-- 对女性的描述 -->
+	<descriptorsFeminine>
+		<descriptor>strong</descriptor>
+	</descriptorsFeminine>
+
+	<!-- 触手末端单数名称 -->
+	<tipName><![CDATA[tip]]></tipName>
+	<!-- 触手末端复数名称 -->
+	<tipNamePlural><![CDATA[tips]]></tipNamePlural>
+	<!-- 对男性触手末端的描述 -->
+	<tipDescriptorsMasculine>
+		<descriptor>rounded</descriptor>
+	</tipDescriptorsMasculine>
+	<!-- 对女性触手末端的描述 -->
+	<tipDescriptorsFeminine>
+		<descriptor>rounded</descriptor>
+	</tipDescriptorsFeminine>
+
+	<!-- 当一个角色转变成这种触手的时候的描述语句
+		<br/> 转变语句之后便是对这种触角的形容
+		其中 <br/> 是换行符号
+		可以在<![CDATA[ ]]中使用解析指令
+		-->
+	<transformationDescription><![CDATA[
+	]]></transformationDescription>
+
+	<!-- 角色的描述页面对触手的描述。 -->
+	<bodyDescription><![CDATA[
+		In place of legs, [npc.sheHasFull] [npc.tentacleCount] [npc.tentacleColour(true)] tentacles, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects.
+	]]></bodyDescription>
+	
+</tentacle>

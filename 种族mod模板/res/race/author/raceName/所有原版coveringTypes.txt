@@ -1,0 +1,121 @@
+普通部位coveringTypes
+        HUMAN 			      人类（皮肤）
+        FOX_FUR   			      狐（皮毛）
+        ANGEL 			      天使（皮肤）
+        ANGEL_FEATHER   		      天使（附羽）
+        DEMON_COMMON  		      恶魔（皮肤）
+        DEMON_FEATHER 		      恶魔（附羽）
+        BAT_SKIN			      蝙蝠（皮肤）
+        BAT_FUR  			      蝙蝠（皮毛）
+        CANINE_FUR 			      狗（皮毛）
+        LYCAN_FUR 			      狼（皮毛）
+        FELINE_FUR 			      猫（皮毛）
+        SQUIRREL_FUR 		   松鼠（皮毛）
+        RAT_SKIN 			      鼠（皮肤）
+        RAT_FUR 			      鼠（皮毛）
+        RABBIT_FUR 			      兔（软毛）
+        HORSE_HAIR   		      马（长毛）
+        REINDEER_FUR 		      鹿（皮毛）
+        BOVINE_FUR 			      牛（皮毛）
+        HARPY_SKIN   		      鸟妖（皮肤）
+        DILDO   			      人偶（皮肤）
+        OCTOPUS_SKIN  		      章鱼（皮肤）
+
+
+其他部位coveringTypes
+        PENIS			      阴茎
+        ANUS			      肛门
+        MOUTH			      嘴
+        NIPPLES			      乳头
+        NIPPLES_CROTCH 		      腹部乳头
+        VAGINA 			      阴道
+        SPINNERET 		 	      蜘蛛丝囊
+        ALLIGATOR_SCALES   		      鳄鱼鳞片
+        SNAKE_SCALES   		      蛇鳞片
+        SPIDER_CHITIN    		      蜘蛛外壳
+        FISH_SCALES   		      鱼鳞片
+        ANTENNA   			      触须
+        HORN  			      角
+        ANTLER   			      鹿角
+        TONGUE   			      舌头
+        FEATHERS   			      羽毛
+        WING_LEATHER   		      皮翅膀
+        WING_CHITIN 		      甲壳翅膀
+
+
+头发coveringTypes
+        HAIR_HUMAN 		   人类（皮肤）
+        HAIR_ANGEL 			      天使（皮肤）
+        HAIR_FOX_FUR  		   狐（皮毛）
+        HAIR_DEMON 		      恶魔（皮肤）
+        HAIR_CANINE_FUR 		      狗（皮毛）
+        HAIR_LYCAN_FUR 		      狼（皮毛）
+        HAIR_FELINE_FUR		      猫（皮毛）
+        HAIR_HORSE_HAIR 		      马（长毛）
+        HAIR_REINDEER_FUR		      鹿（皮毛）
+        HAIR_BOVINE_FUR 		      牛（皮毛）
+        HAIR_SQUIRREL_FUR  		      松鼠（皮毛）
+        HAIR_RAT_FUR 		      鼠（皮毛）
+        HAIR_RABBIT_FUR		      兔（皮毛）
+        HAIR_BAT_FUR		      蝙蝠（皮毛）
+    	HAIR_HARPY		 	      鸟妖（附羽）
+        HAIR_SCALES_ALLIGATOR	      鳄鱼（鳞片）
+
+
+体毛coveringTypes
+        BODY_HAIR_HUMAN                         人类（皮肤）
+        BODY_HAIR_ANGEL 		   天使（皮肤）
+        BODY_HAIR_DEMON		      恶魔（皮肤）
+        BODY_HAIR_CANINE_FUR 	   狗（皮毛）
+        BODY_HAIR_LYCAN_FUR 	   狼（皮毛）
+        BODY_HAIR_FOX_FUR 		      狐（皮毛）
+        BODY_HAIR_FELINE_FUR 	      猫（皮毛）
+        BODY_HAIR_HORSE_HAIR 	      马（长毛）
+        BODY_HAIR_REINDEER_HAIR 	   鹿（长毛）
+        BODY_HAIR_BOVINE_FUR 	      牛（皮毛）
+        BODY_HAIR_SQUIRREL_FUR 	      松鼠（皮毛）
+        BODY_HAIR_RAT_FUR 		   鼠（皮毛）
+        BODY_HAIR_RABBIT_FUR  	      兔（皮毛）
+        BODY_HAIR_BAT_FUR		      蝙蝠（皮毛）
+        BODY_HAIR_HARPY		   鸟妖（附羽）
+        BODY_HAIR_SCALES_ALLIGATOR   鳄鱼（鳞片）
+
+眼睛coveringTypes
+        EYE_HUMAN 			      人类
+        EYE_ANGEL 			      天使
+        EYE_DEMON_COMMON 	      恶魔
+        EYE_DOG_MORPH 		   狗
+        EYE_LYCAN  			   狼
+        EYE_FOX_MORPH  		      狐
+        EYE_FELINE 			   猫
+        EYE_SQUIRREL 		      松鼠
+        EYE_RAT 			   鼠
+        EYE_RABBIT 			   兔
+        EYE_BAT 			   蝙蝠
+        EYE_ALLIGATOR_MORPH 	   鳄鱼
+        EYE_HORSE_MORPH 		   马
+        EYE_REINDEER_MORPH 	   鹿
+        EYE_COW_MORPH 		   牛
+        EYE_HARPY 			   鸟妖
+
+        EYE_PUPILS 			      瞳孔
+        EYE_SCLERA			      巩膜
+
+液体coveringTypes
+        CUM  			      精液
+        GIRL_CUM  			      爱液
+        MILK 		   	      乳汁
+
+
+化妆coveringTypes
+        MAKEUP_BLUSHER		      腮红
+        MAKEUP_EYE_LINER		      眼线
+        MAKEUP_EYE_SHADOW	    眼影
+        MAKEUP_LIPSTICK		      口红
+        MAKEUP_NAIL_POLISH_HANDS       手指甲油
+        MAKEUP_NAIL_POLISH_FEET            脚指甲油
+
+
+
+
+

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<fluid>
+
+	<!-- 种族id -->
+	<race>author_raceName</race>
+
+	<!-- 种族部件转化时候显示的名称 一般是 种族名称 -->
+	<transformationName><![CDATA[种族名称]]></transformationName>
+	
+	<!-- 液体类型
+	CUM("精液")
+    GIRLCUM("爱液")
+    MILK("乳汁")
+	-->
+	<baseFluidType>MILK</baseFluidType>
+	
+	<!-- 液体风味
+	CUM("精液", "咸涩")
+    MILK("乳汁", "香醇")
+    GIRL_CUM("爱液", "微甜")
+    FLAVOURLESS("无味")
+    BUBBLEGUM("泡泡糖", "微甜")
+    BEER("啤酒", "麦芽香")
+    VANILLA("香草", "清甜")
+    STRAWBERRY("草莓", "甜味")
+    CHOCOLATE("巧克力", "巧克力味")
+    PINEAPPLE("菠萝", "酸甜")
+    HONEY("蜂蜜", "甜味")
+    MINT("薄荷", "薄荷味")
+    CHERRY("樱桃", "甜味")
+    COFFEE("咖啡", "苦涩")
+    TEA("茶叶", "茶叶风味")
+    MAPLE("枫浆", "甜味")
+    CINNAMON("肉桂", "肉桂风味")
+    LEMON("柠檬", "酸味")
+    ORANGE("橙子", "橙子风味")
+    GRAPE("葡萄", "葡萄风味")
+    MELON("蜜瓜", "蜜瓜风味")
+    COCONUT("椰子", "椰子风味")
+    BLUEBERRY("蓝莓", "蓝莓风味")
+    BANANA("香蕉", "香蕉风味")
+	-->
+	<flavour>MILK</flavour>
+
+	<!-- 对男性的名称 -->
+	<namesMasculine/>
+	<!-- 对女性的名称 -->
+	<namesFeminine/>
+
+	<!-- 对男性的描述 -->
+	<descriptorsMasculine>
+		<name><![CDATA[龙]]></name>
+	</descriptorsMasculine>
+
+	<!-- 对女性的描述 -->
+	<descriptorsFeminine>
+		<name><![CDATA[龙]]></name>
+	</descriptorsFeminine>
+	
+	<!-- 液体修改
+	用<modifier>间隔
+	VISCOUS		"粘稠"),
+    STICKY		"黏糊糊"),
+    SLIMY		"粘滑"),
+    BUBBLING	"起泡"),
+    MUSKY		"气味浓重"),
+    MINERAL_OIL	"矿物油"),
+    ALCOHOLIC	"高度酒精") -->
+	-->
+
+	<defaultFluidModifiers/>
+
+	
+</fluid>

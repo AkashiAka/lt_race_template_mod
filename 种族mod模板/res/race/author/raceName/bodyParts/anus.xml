@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<anus>
+	<!-- 种族id -->
+	<race>author_raceName</race>
+
+	<!-- 参考原版coveringType 可以填	ANUS
+	如果要自定义
+	肛门覆盖id 推荐命名 作者_种族名字_anus 其中“作者_种族名字”与race文件中的相同
+	需要coveringTypes(没有这个文件夹自己创建)中建立并填写anus.xml文件
+	 -->
+	<coveringType>author_raceName_anus</coveringType>
+
+	<!-- 单数名称(默认无) -->
+	<names/>
+
+
+	<!-- 复数名称(默认无) -->
+	<namesPlural/>
+
+	<!-- 对男性的描述(默认无) -->
+	<descriptorsMasculine/>
+	<!-- 对女性的描述(默认无) -->
+	<descriptorsFeminine/>
+	
+	<!-- 肛门内部修改
+	PUFFY("肉感"),
+    RIBBED("内部螺纹"),
+    TENTACLED("长有触手"),
+    MUSCLE_CONTROL("肌肉发达")(该腔穴永远不会被认为“过于松垮”，无论插入物的直径和腔穴的容量)
+    没有就
+    <defaultOrificeModifiers/>
+	 -->
+	<defaultOrificeModifiers>
+		<modifier>PUFFY</modifier>
+		<modifier>MUSCLE_CONTROL</modifier>
+	</defaultOrificeModifiers>
+
+	<!--
+	如果允许肛门长毛
+	<assHairAllowed>true</assHairAllowed>
+	-->
+
+	
+</anus>

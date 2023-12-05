@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<nipple>
+	<!-- 种族id -->
+	<race>author_raceName</race>
+
+	<!-- 参考原版coveringType 可以填	NIPPLES
+	如果要自定义
+	乳头覆盖id 推荐命名 作者_种族名字_nipple 其中“作者_种族名字”与race文件中的相同
+	需要coveringTypes(没有这个文件夹自己创建)中建立并填写nipple.xml文件
+	 -->
+	<coveringType>author_raceName_nipple</coveringType>
+
+	<!-- 对男性的描述 -->
+	<descriptorsMasculine/>
+	<!-- 对女性的描述 -->
+	<descriptorsFeminine/>
+
+	<!-- 嘴唇修改：
+	<modifier>分隔
+	PUFFY("肉感"),
+    RIBBED("内部螺纹")
+    TENTACLED("长有触手")
+    MUSCLE_CONTROL("肌肉发达")
+	-->
+	<defaultOrificeModifiers>
+		<modifier>PUFFY</modifier>
+	</defaultOrificeModifiers>
+
+	
+</nipple>

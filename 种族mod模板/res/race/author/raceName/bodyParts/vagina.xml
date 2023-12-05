@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<vagina>
+	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
+
+	<!-- 种族id -->
+	<race>author_raceName</race>
+
+	<!-- 种族部件转化时候显示的名称 一般是 种族名称 -->
+	<transformationName><![CDATA[种族名称]]></transformationName>
+
+	<!-- 参考原版coveringType 可以填	VAGINA
+	如果要自定义
+	阴道覆盖id 推荐命名 作者_种族名字_penis 其中“作者_种族名字”与race文件中的相同
+	需要coveringTypes(没有这个文件夹自己创建)中建立并填写penis.xml文件
+	 -->
+	<coveringType>author_raceName_vagina</coveringType>
+
+	<!-- 允许阴毛 <pubicHairAllowed>true</pubicHairAllowed>-->
+
+	<!-- 爱液描述，完成同文件夹下的girlcum.xml的文件 -->
+	<fluidType>author_raceName_girlcum</fluidType>
+	
+	<!-- 产卵（true）还是生崽(false) -->
+	<eggLayer>true</eggLayer>
+
+	<!-- 单数名称 -->
+	<names>
+		<name><![CDATA[龙]]></name>
+	</names>
+	<!-- 复数名称 -->
+	<namesPlural>
+		<name><![CDATA[龙]]></name>
+	</namesPlural>
+
+	<!-- 对部位的描述 -->
+	<descriptors>
+		<descriptor><![CDATA[性感]]></descriptor>
+	</descriptors>
+	
+	<!-- 部位修改：
+	用<modifier>分隔
+	PUFFY("肉感")
+    RIBBED("内部螺纹")
+    TENTACLED("长有触手")
+    MUSCLE_CONTROL("肌肉发达")
+	 -->
+	<defaultOrificeModifiers>
+		<modifier>MUSCLE_CONTROL</modifier>
+	</defaultOrificeModifiers>
+
+	<!-- 当一个角色转变成这种阴道的时候的描述语句
+		<br/> 转变语句之后便是对这种触角的形容
+		其中 <br/> 是换行符号
+		可以在<![CDATA[ ]]中使用解析指令
+		-->
+	<transformationDescription><![CDATA[
+			[npc.She]感受到快感的波浪上蹿到腹股沟，发出了兴奋的浪叫声。 这加剧了[npc.her]的小缝不受控制地抽动和收缩。片刻后，快感消散，[npc.she]发现[npc.her]的小穴形状变成了明显的龙形态。
+		</p>
+		<p>
+			[npc.she]刚以为转化要结束了，小穴内壁新生的肌肉就不由自主地缩紧，[npc.her][npc.lips+]间发出狂喜的尖叫，一种温暖的抽痛传遍小腹。[npc.she]眼前闪现出幻想的图景：跳动的龙阴茎深深插入[npc.her]稚嫩的小穴。[npc.her]的尖叫渐渐变为饕足的呜咽，[npc.she]想象着它把精液泵入[npc.her]新生的子宫。来得快去得也快，这副图景从[npc.her]的脑海中消散。抽痛的余波冲刷过[npc.her]的身体，[npc.her]的女性生殖器官完成了转化。
+			<br/>[npc.Name]现在拥有[style.boldDragon(龙的阴道)]，[npc.pussyColourPrimary(true)]阴唇和[npc.pussyColourSecondary(true)]内壁。
+	]]></transformationDescription>
+
+	<!-- 角色的描述页面对阴茎的描述。 -->
+	<bodyDescription><![CDATA[
+		[npc.she]拥有#IF(npc.isPiercedVagina())一个打孔的#ELSE一个#ENDIF龙小穴，[npc.labiaSize]，[npc.pussyPrimaryColour(true)]被光滑鳞片覆盖的阴唇和[npc.pussySecondaryColour(true)]内壁。
+	]]></bodyDescription>
+	
+</vagina>
