@@ -124,21 +124,21 @@
 	 	 留空代表使用默认-->
 	<backgroundName>background</backgroundName>
 	
-	<!-- Book information:
-	Books are automatically-generated items which reveal information about the game's subspecies.
-	There is a unique book created for every unique value defined for each subspecies' 'advancedDescriptionId' field.
-	i.e. If I defined a different 'advancedDescriptionId' for spotted and striped hyenas, the game would make a book for each of them.
-		As it stands, I have defined both spotted and striped hyena subspecies to use the 'hyena_advanced' xml file, so there will only be one book type generated.	-->
+	<!-- 书籍是自动生成的
+	为每个亚种的“advancedDescriptionId”字段定义的每个唯一值都创建了一本唯一的书。
+	若字段的值不相同，游戏会为它们每人制作一本书。
+	-->
 		
-	<!-- The icon to be used on the book's front cover.
-	It should be located in the same folder as this xml file. -->
+	<!-- 这个书籍的图标的名字，一般和种族（亚种）图标一样；应该是同名文件夹下的svg文件 -->
 	<bookIconName>icon</bookIconName>
 	
 	<!-- 书籍的名字 -->
 	<bookName><![CDATA[书籍名字]]></bookName>
 	
 	<!-- 描述元素,这里写名字,具体内容应当写到同文件夹下的bookEntries.xml里 -->
+	<!-- 基本描述id -->
 	<basicDescriptionId>HYENA_BASIC</basicDescriptionId>
+	<!-- 该亚种高级描述id(看书才会出现) -->
 	<advancedDescriptionId>HYENA_ADVANCED</advancedDescriptionId>
 	
 	<!-- 该亚种偏好，随机出现的这个种族是这个亚种的概率

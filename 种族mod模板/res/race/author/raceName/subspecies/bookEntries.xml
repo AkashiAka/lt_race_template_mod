@@ -1,15 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <bookText>
 	
-	<!-- You can define an author name to be shown in-game by setting the 'author' attribute.
-		I advise using a lore-friendly name so as to not break immersion, although of course you're free to use whatever name you like in your mod. -->
+	<!-- 您可以通过设置“author”属性来定义要在游戏中显示的作者名称(不是你的名字，当然也可以是)
+		 我建议使用一个对传说友好的名字，以免破坏沉浸感 -->
+	<!-- 基本描述 -->
 	<htmlContent tag="HYENA_BASIC" author="Professor Webster"><![CDATA[
 	<p>
 		鬣狗化形几乎只在莉莉丝王国南部的稀树草原和沙漠中现身，但也偶有零星个体在御城区的街道上游荡。圆形的耳朵、散发掠夺性的眼睛以及独特的斑点或条纹皮毛，这就足以让人认出他们是鬣狗化形。
 	</p>
 	
 	]]></htmlContent>
-	
+
+	<!-- 高级描述(看书才会出现) -->
+	<!-- 你可以写多个不同tag也就是id的高级描述以对应你的每一个亚种里的<advancedDescriptionId> -->
 	<htmlContent tag="HYENA_ADVANCED" author="Professor Webster"><![CDATA[
 	<p style='text-align:center;'>
 		[style.boldHyena(斑鬣狗)]
