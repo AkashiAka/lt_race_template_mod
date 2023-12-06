@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<colour>
+	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
+	
+	<!-- 颜色的图标指转化时给部件选择颜色时的小正方形 -->
+
+	<!-- 这是不是金属色?
+	如果是金属色,游戏会为该颜色的图标生成金属效果 -->
+	<metallic>false</metallic>
+	
+	<!-- 名字. -->
+	<name><![CDATA[深黑色]]></name>
+	
+	<!-- 深色主题时显示的颜色 -->
+	<colour>495495</colour>
+	<!-- 浅色主题时显示的颜色
+	在用于物品或种族上色的情况下,和上面相同即可 -->
+	<lightColour>495495</lightColour>
+	<!-- 在变形界面对颜色标注时展示的颜色,应该和上面俩相同
+	你可以省略不写,那么值就是<colour>值 -->
+	<coveringIconColour>495495</coveringIconColour>
+	
+	<!-- 定义后可以这样些[style.colour别名1(文本)][style.colour别名2(文本)]等指令使用
+	这个东西会污染内置的指令说明(里面其实被污染的差不多了……1000+都是这种生成的指令)
+	经测试这东西不写还会导致内置的指令/指令列表不能使用…… -->
+	<formattingNames>
+		<name><![CDATA[别名1]]></name>
+		<name><![CDATA[别名2]]></name>
+	</formattingNames>
+	
+	<!-- 
+	决定该颜色是否添加到游戏的覆盖颜色(用于皮毛、眼睛、皮肤……)
+	(23.11.26查询)
+	自然表示可以刷出来,非自然表示只能通过转化获得
+	SKIN					皮肤
+	SLIME_NATURAL			自然黏液
+	SLIME_DYE				非自然黏液
+	FEATHER_NATURAL			自然羽毛
+	FEATHER_DYE				非自然染色
+	FUR						福瑞
+	SCALE					巩膜
+	HORN					角
+	ANTLER					鹿角
+	HAIR					头发
+	GENERIC_COVERING		此标签将把颜色添加到“所有覆盖物”列表中：
+	MAKEUP					可以用作化妆染料
+	IRIS_NATURAL			自然产生的虹膜颜色,可用于非捕食性(non-predatory)种族
+	IRIS_DYE				非自然产生的虹膜颜色,可用于非捕食性(non-predatory)种族
+	IRIS_PREDATOR_NATURAL	自然产生的虹膜颜色,可用于捕食性(predatory)种族
+	IRIS_PREDATOR_DYE		非自然产生的虹膜颜色,可用于捕食性(predatory)种族
+	PUPIL_NATURAL			自然产生的瞳孔颜色
+	PUPIL_DYE				非自然产生的虹膜颜色
+	SCLERA_NATURAL			自然产生的眼白颜色
+	SCLERA_DYE				非自然产生的眼白颜色
+	可以在这里查询: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/ColourTag.java -->
+	<tags>
+		<tag>SKIN</tag>
+	</tags>
+	
+</colour>

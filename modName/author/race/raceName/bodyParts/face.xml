@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<face>
+
+	<!-- 种族id -->
+	<race>author_raceName</race>
+
+	<!-- 种族部件转化时候显示的名称 一般是 种族名称 -->
+	<transformationName><![CDATA[种族名称]]></transformationName>
+
+	<!-- 参考原版coveringType 可以填	皮肤coveringTypes
+	如果要自定义
+	皮肤覆盖id 推荐命名 作者_种族名字_skin 其中“作者_种族名字”与race文件中的相同
+	需要coveringTypes(没有这个文件夹自己创建)中建立并填写skin.xml文件
+	 -->
+	<coveringType>author_raceName_skin</coveringType>
+
+	<!-- 允许面部毛发则 <facialHairAllowed>true</facialHairAllowed> -->
+	
+	<!-- 嘴部描述 ,完成同文件夹下的mouth.xml文件 -->
+	<mouthType>author_raceName_mouth</mouthType>
+	
+	<!-- 脸部tag:
+	FACE_STANDARD 常规脸型
+	FACE_MUZZLE 类犬脸部
+	FACE_FANGS 尖牙脸部
+	FACE_BEAK 鸟嘴脸部
+	FACE_SHARK_TEETH 带鲨鱼牙齿的脸(暂未实现)
+	FACE_VENOMOUS_TEETH 有毒牙的脸
+	FACE_VENOMOUS_TEETH_LUST 有产生“欲望中毒”效果毒牙的脸
+	FACE_NATURAL_BALDNESS_FURRY 秃头,用于哺乳动物
+	FACE_NATURAL_BALDNESS_AVIAN 秃头,用于鸟类
+	FACE_NATURAL_BALDNESS_SCALY 秃头,用于爬行类或两栖类
+	FACE_NATURAL_BALDNESS_SKIN 秃头,用于类似人类皮肤的物种
+	 -->
+	<tags>
+		<tag>FACE_MUZZLE</tag>
+		<tag>FACE_FANGS</tag>
+		<tag>FACE_NATURAL_BALDNESS_SCALY</tag>
+	</tags>
+
+
+	<names/>
+	<namesPlural/>
+
+	<!-- 对男性的描述 -->
+	<descriptorsMasculine>
+		<descriptor><![CDATA[龙般拟人]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
+		<descriptor><![CDATA[龙的]]></descriptor>
+	</descriptorsMasculine>
+	<!-- 对女性的描述 -->
+	<descriptorsFeminine>
+		<descriptor><![CDATA[龙般拟人]]></descriptor>
+		<descriptor><![CDATA[龙一般]]></descriptor>
+		<descriptor><![CDATA[龙的]]></descriptor>
+	</descriptorsFeminine>
+
+
+	<!-- 鼻子单数名称 -->
+	<noseName><![CDATA[吻]]></noseName>
+	<!-- 鼻子复数名称 -->
+	<noseNamePlural><![CDATA[noses]]></noseNamePlural>
+
+	<!-- 对男性鼻子的描述 -->
+	<noseDescriptorsMasculine/>
+	<!-- 对女性鼻子的描述 -->
+	<noseDescriptorsFeminine/>
+
+	<!-- 当一个角色转变成这种脸部的时候的描述语句
+    <br/> 转变语句之后便是对这种触角的形容
+    其中 <br/> 是换行符号
+    可以在<![CDATA[ ]]中使用解析指令
+    -->
+	<transformationDescription><![CDATA[
+	[npc.Her]的鼻子和嘴微微抽动，随后便转化为了似人的龙吻部，舌头也变得细长，与动物类似。
+	#IF(npc.getBodyMaterial()==BODY_MATERIAL_FLESH)
+		一层[npc.faceSkin+]细毛迅速长出并覆盖了她的新脸，
+	#ELSE
+		就像她身体的其它部位一样，她的新脸[npc.materialDescriptor][npc.faceSkin+]，
+	#ENDIF
+	当转化彻底完成时，[npc.sheIs]试图喘口气，却发出了娇喘和呻吟。
+	<br/>[npc.Name]现在拥有一张似人的[style.boldDragon(龙脸)]，[npc.materialDescriptor][npc.faceFullDescription]。在[npc.her]嘴中有一根[style.boldDragon(长的龙舌)]。
+	]]></transformationDescription>
+
+	<!-- 角色的描述页面对脸部的描述。 -->
+	<bodyDescription><![CDATA[
+		[npc.SheHasFull]拥有[npc.a_feminineDescriptor(true)]的龙面庞，有人类特征，[npc.materialCompositionDescriptor][npc.faceFullDescription(true)]，且有完整的吻部。
+	]]></bodyDescription>
+	<!-- 角色的描述页面兽化时对脸部的描述。 -->
+	<bodyDescriptionFeral><![CDATA[
+		[npc.SheHasFull] the [npc.feminineDescriptor(true)] face of a feral [npc.legRace], which is [npc.materialDescriptor] [npc.faceFullDescription(true)] and complete with a pointed muzzle.
+	]]></bodyDescriptionFeral>
+	
+</face>

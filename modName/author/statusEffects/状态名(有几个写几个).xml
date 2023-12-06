@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<statusEffect>
+	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
+	
+	<!-- 一个整数表示这个状态的渲染优先级
+	通常值是50.
+	一些示例:
+	- 一个角色的种族效果,优先级总是最高
+	- 天气效果的优先级为100(作者希望它们总是尽可能考前地显示)
+	- 性相关考虑90(作者希望它们总是尽可能高地显示).
+	- 大多数其他标准状态影响(如怀孕、休息良好、酒精水平等)的优先级为80.
+	- 套装奖励是70. -->
+	<renderingPriority>70</renderingPriority>
+	
+	<!-- 如果你希望它能显示在玩家buff栏里,应当设为true. -->
+	<renderInEffectsPanel>true</renderInEffectsPanel>
+	
+	<!-- 此效果的类别,你可以省略这个空,它将会被设为DEFAULT类别
+	类的含义可以查这里:https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/effects/StatusEffectCategory.java -->
+	<!-- (23.12.6查询)
+	DEFAULT		没啥特殊效果
+	ATTRIBUTE	这个状态效果只会在角色属性变动后才会更新检测
+	INVENTORY	这个状态只会在角色的物品栏/背包变动后才会更新检测
+	-->
+	<category>DEFAULT</category>
+	
+	<!-- 'BENEFICIAL'表面这是个有利buff,'NEUTRAL'是中立buff,'DETRIMENTAL'是debuff. -->
+	<beneficial>BENEFICIAL</beneficial>
+	
+	<!-- 如果你想要该状态效果仅在战斗中渲染,并且在战斗中每一回合都将 applyEffect 元素的内容施加给受影响角色,请设置为 true .
+	只有该状态效果 仅 在战斗中施加并使用时,才需要设置为“true”.被标记为战斗状态效果的,战斗外则不会施加效果. -->
+	<combatEffect>false</combatEffect>
+	
+	<!-- 如果你想要该状态效果在性交中渲染,请设置为 true. -->
+	<sexEffect>false</sexEffect>
+	
+	<!-- buff激活后,目标角色受到的tag.
+	可以在这里看tag:https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/inventory/ItemTag.java
+	(v0.4)支持的标签如下:
+		NIGHT_VISION_SELF				仅为佩戴者提供对黑暗debuff的免疫力
+		NIGHT_VISION_AREA				为佩戴者所在区域的所有角色提供黑暗减影豁免
+		SPREADS_FEET					限制性爱动作
+		MUFFLES_SPEECH					说话含糊不清
+		HINDERS_ARM_MOVEMENT			妨碍手臂运动/阻止翼手战斗
+		HINDERS_LEG_MOVEMENT			妨碍腿部运动/阻止非飞行战斗逃跑
+		PREVENTS_ERECTION_PHYSICAL		限制勃起(通过阻止勃起),v0.3.1前,仅影响描述符,之后版本未知
+		PREVENTS_ERECTION_OTHER			限制勃起(通过阻止勃起),v0.3.1前,仅影响描述符,之后版本未知
+	剩下的往后更新不大可能会支持,如果更新的话作者会补加. -->
+	<tags/>
+	
+	<!-- 该buff的名称(name).处于该效果下的角色会以'npc'作为解析变量传入.所以如果你想要引用,可以使用[npc.name]等类似形式. -->
+	<name><![CDATA[权力之袜]]></name>
+	
+	<!-- 该buff的描述.处于该效果下的角色会以'npc'作为解析变量传入.所以如果你想要引用,可以使用[npc.name]等类似形式. -->
+	<description><![CDATA[
+            穿上模板袜，你就成了袜子之神！
+]]></description>
+	
+	<!-- 图标名字,应和xml处于同一文件夹 -->
+	<imageName>ico.svg</imageName>
+	
+	<!-- 颜色
+	可以使用内置颜色:https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java
+	或者你自己定义的颜色已经其他mod的颜色(你需要让你的玩家安装其他mod才行) -->
+	<colourPrimary>CLOTHING_WHITE</colourPrimary> <!-- 必须要写,不然不能加载. -->
+	<colourSecondary/> <!-- 可以留空,'colourTertiary'也一样. -->
+	<colourTertiary/>
+	
+	<!-- 该状态效果对属性的影响
+	值可以从这里来查:https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/character/attributes/Attribute.java-->
+	<!-- value中是数值
+	无论是10%伤害加成还是10点护盾value都是等于10
+	为"0"的值会自动忽略
+	HEALTH_MAXIMUM		生命
+	MANA_MAXIMUM		灵力
+	EXPERIENCE			经验值
+	ACTION_POINTS		行动点数
+	AROUSAL				快感
+	LUST				性欲
+	RESTING_LUST		日常性欲
+	"性欲会逐渐回复到日常性欲这个值"
+	MAJOR_PHYSIQUE		体格
+	MAJOR_ARCANE		奥术
+	MAJOR_CORRUPTION	堕落
+	// 其他属性:
+	ENCHANTMENT_LIMIT	附魔上限
+	FERTILITY			生育力
+	VIRILITY			繁殖力
+	// 战斗属性:
+	CRITICAL_DAMAGE		暴击伤害
+	SPELL_COST_MODIFIER	法术效率
+	// 护盾:
+	ENERGY_SHIELDING	生命护盾
+	RESISTANCE_PHYSICAL	物理护盾
+	RESISTANCE_LUST		性欲护盾
+	RESISTANCE_FIRE		火焰护盾
+	RESISTANCE_ICE		寒冰护盾
+	RESISTANCE_POISON	毒素护盾
+	// 伤害:
+	DAMAGE_UNARMED 		徒手伤害
+	DAMAGE_MELEE_WEAPON	近战伤害
+	DAMAGE_RANGED_WEAPON远程伤害
+	DAMAGE_SPELLS		法术伤害
+	DAMAGE_PHYSICAL		物理伤害
+	DAMAGE_LUST			性欲伤害
+	DAMAGE_FIRE			火焰伤害
+	DAMAGE_ICE			寒冰伤害
+	DAMAGE_POISON		毒素伤害 -->
+	<attributeModifiers>
+		<modifier value="100.0">HEALTH_MAXIMUM</modifier>
+	</attributeModifiers>
+	
+	<!-- 拥有此buff时可以解锁的战斗动作(combatMoves).
+	CombatMoves标识符在构造函数中定义.
+	可以在这里查内置的战斗动作:https://github.com/Innoxia/liliths-throne-public/tree/dev/src/com/lilithsthrone/game/combat/moves
+	不需要添加战斗动作可以留空: -->
+	<combatMoves/>
+	
+	<!-- 受到该状态效果影响的角色将会解锁那些法术..
+	可以在这里查内置的法术: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/game/combat/spells/Spell.java
+	不需要添加战斗动作可以留空: -->
+	<spells/>
+	
+	<!-- 你可以使用这一部分来描述状态效果可能附带的额外效果.
+	当玩家将鼠标悬浮在状态效果的图标上,这些效果将会显示在提示中.处于该效果下的角色会以'npc'作为解析变量传入.
+	所以如果你想要引用,可以使用[npc.name]等类似形式.对于该状态效果,没有需要描述的额外效果,但如果想要使用该部分,请遵循以下格式:-->
+	<!-- <extraEffects>
+		<effect><![CDATA[[npc.name]的体力正在岁时间流逝。]]></effect>
+	</extraEffects> -->
+	<extraEffects/>
+	
+	
+	<!-- 效果逻辑 -->
+	
+	<!-- 状态效果被施加的条件默认设置为'false''
+	返回false时不会被施加这个buff,返回true时自动施加buff
+	但是返回false你也可以通过'npc.addStatusEffect(状态id, 持续实际/秒)'来施加这个buff -->
+	<applicationCondition><![CDATA[
+		#IF(SET_BONUS_innoxia_template.isCharacterWearingCompleteSet(npc))
+			true
+		#ELSE
+			false
+		#ENDIF
+	]]></applicationCondition>
+	<!--上面的例子表示它可以创建很"复杂"的条件,但是你可以通过下面的方式来简写:
+	<applicationCondition shortConditionalCheck="true"><![CDATA[
+		SET_BONUS_innoxia_kitty.isCharacterWearingCompleteSet(npc)
+	]]></applicationCondition>
+	-->
+	
+	<!-- 条件满足时这个buff应当被施加多久时间.
+	这是以s为单位计算的,应当为一个int.
+	值为'-1'表示只要'applicationCondition'返回1这个buff就会一直有效
+	大部分的游戏效果该字段都为-1.
+	如果'constantRefresh'为'true',当applicationCondition返回true时那么buff持续时间将被刷新(例:泰拉瑞亚的岩浆,站进去始你的灼烧buff时间总是被设为5s)
+	如果'constantRefresh'为'false',当applicationCondition返回true时,持续时间不会刷新
+	如果该值为'-1',那么'constantRefresh'不会生效,但为了格式统一,应设为'false. -->
+	<applicationLength constantRefresh="false">-1</applicationLength>
+	
+	
+	<!-- 每当游戏回合结束时'applyEffect(GameCharacter target, int secondsPassed)'便会被执行.
+	npc						是受到效果影响的角色
+	SECONDS_PASSED			经过了多少秒,战斗时恒定为1.
+	TOTAL_SECONDS_PASSED	这个buff被施加了多长时间,'TOTAL_SECONDS_PASSED == 0'可以用来实现只有效果刚被施加时才生效
+	返回的字符串会进入内置解释器处理,处理后显示的字符串在'重要状态效果'屏幕中显示.	
+	<applyEffect interval="3600"><![CDATA[
+		#IF(SECONDS_PASSED>0)
+			一小时过去了!
+			#IF(TOTAL_SECONDS_PASSED>(60*60*24))
+				[##game.getTextEndStringBuilder().append("<p>这个buff已经被施加一天了!</p>")]
+			#ENDIF
+		#ENDIF
+	]]></applyEffect>
+	-->
+	<applyEffect/>
+	
+	<!-- 与上方的'applyEffect'元素行为相似,游戏本体会在该状态效果被移除前执行逻辑.
+	逻辑执行时,角色实际上依然还处于该状态效果的影响下. -->
+	<applyRemovalEffect/>
+	
+	<!-- 与上方的'applyEffect'元素行为相似,游戏本体会在该状态效果被移除后执行逻辑.
+	逻辑执行时,角色实际上已经不再处于该状态效果的影响. -->
+	<applyPostRemovalEffect/>
+	
+</statusEffect>
