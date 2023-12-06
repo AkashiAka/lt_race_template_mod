@@ -1,3 +1,4 @@
+仅地点仅包含java源码与作者自己的xml,吞进去的内置mod没有算
 EMPTY                           			空置域(暂存世界)
 WORLD_MAP                       			莉莉丝的王国
 DOMINION                        			御城区

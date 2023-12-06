@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <coveringType>
-	<!-- GENERAL INFORMATION: If you are unsure of anything, please use the LT Discord to ask for help! -->
-	
 	<!-- 覆盖的种类：
 	MAIN_SKIN("皮肤"),
     MAIN_HAIR("毛发"),
@@ -27,8 +25,7 @@
     BODY_HAIR("体毛"),
     ARTIFICIAL("假屌")
     FLUID("液体")
-    MAKEUP("妆容")
-	 -->
+    MAKEUP("妆容") -->
 	<category>MAIN_FUR</category>
 	
 	<!-- 限定词-->
@@ -107,12 +104,13 @@
 	<extraPatterns/>
 	
 	
-	<!-- The colours which this covering has available to it.
-	'natural' colours are those which can be chosen when a race with this covering is spawning in naturally.
-	The 'extra' colours are those which are available via transformation.
-	Colour values can be found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java
-	Instead of defining colours individually, you can use the 'values' attribute to apply pre-defined colours.
-	Acceptable 'values' are found here: https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/ColourListPresets.java -->
+	<!-- 这个coveringType是啥颜色.
+	'natural'表示自然刷新时能选择的颜色
+	'extra'表示'转化'时可以选择的颜色
+	<colour>的值可以到这里来查找:https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/PresetColour.java
+	也可以用自己自定义的颜色
+	除了在这里定义可以用的颜色,你也可以通过'values'属性来传入一组分类好的颜色.
+	'values'的值可以在这里查到:https://github.com/Innoxia/liliths-throne-public/blob/dev/src/com/lilithsthrone/utils/colours/ColourListPresets.java -->
 	
 	<naturalColoursPrimary>
 		<colour>COVERING_TAN</colour>

@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <subspecies>
 
+	<!-- 你首先应该把此文件的名称改为你的亚种的名称 -->
+
 	<!-- 这个亚种属于那个种族 -->
 	<race>author_raceName</race>
 	
