@@ -38,8 +38,11 @@
          可以自由定义这个数值，但是注意不能使用负数，或者总权重大于2,147,483,647的数值，这会报错。
          并且，玩家可以通过游戏中的设置来修改这些权重，所以不必过于拘泥于设置的数值。 -->
 	<!-- 女性的性取向权重：-->
+	<!-- 亲女 -->
 	<orientationFeminineGynephilic>10</orientationFeminineGynephilic>
+	<!-- 亲两性 -->
 	<orientationFeminineAmbiphilic>40</orientationFeminineAmbiphilic>
+	<!-- 亲男 -->
 	<orientationFeminineAndrophilic>50</orientationFeminineAndrophilic>
 	<!-- 男性的性取向权重： -->
 	<orientationMasculineGynephilic>70</orientationMasculineGynephilic>
@@ -287,7 +290,7 @@
 		<shape>NARROW</shape>
 	</breastShapes>
 	
-	<!--男性胸部特征 -->
+	<!--胸部特征 -->
 	<!-- 胸部大小，范围0~91
 	 0      "平坦"
 	 1~3    "难辨有无"
@@ -305,9 +308,12 @@
 	 48~69  "大到恐怖"
 	 70~91  "超乎想象"
 	 -->
-	<maleBreastSize>0</maleBreastSize>
+	 
+	<maleBreastSize>0</maleBreastSize><!-- 男性 -->
+	<femaleBreastSize>9</femaleBreastSize><!-- 女性 -->
 	<!-- 有几对乳房，范围1~6 -->
-	<maleBreastRows>1</maleBreastRows>
+	<maleBreastRows>1</maleBreastRows><!-- 男性 -->
+	<femaleBreastRows>1</femaleBreastRows><!-- 女性 -->
 	<!-- 乳头大小，范围0~4
 	0 "极小"
 	1 "较小"
@@ -315,14 +321,16 @@
 	3 "极大"
 	4 "巨大"
 	-->
-	<maleNippleSize>0</maleNippleSize>
+	<maleNippleSize>0</maleNippleSize><!-- 男性 -->
+	<femaleNippleSize>2</femaleNippleSize><!-- 女性 -->
 	<!-- 乳头形状
 	NORMAL("普通")
     INVERTED("内陷")
     VAGINA("乳穴")
     LIPS("乳唇")
 	 -->
-	<maleNippleShape>NORMAL</maleNippleShape>
+	<maleNippleShape>NORMAL</maleNippleShape><!-- 男性 -->
+	<femaleNippleShape>NORMAL</femaleNippleShape><!-- 女性 -->
 	<!-- 乳晕大小，范围0~4
 	0 "极小"
 	1 "较小"
@@ -330,15 +338,18 @@
 	3 "较大"
 	4 "巨大"
 	 -->
-	<maleAreolaeSize>0</maleAreolaeSize>
+	<maleAreolaeSize>0</maleAreolaeSize><!-- 男性 -->
+	<femaleAreolaeSize>2</femaleAreolaeSize><!-- 女性 -->
 	<!-- 乳晕形状
 	NORMAL("普通")
     HEART("心形")
     STAR("星形")
 	 -->
-	<maleAreolaeShape>NORMAL</maleAreolaeShape>
+	<maleAreolaeShape>NORMAL</maleAreolaeShape><!-- 男性 -->
+	<femaleAreolaeShape>NORMAL</femaleAreolaeShape><!-- 女性 -->
 	<!-- 有乳头的乳房的对数 1~4 -->
-	<maleNippleCountPerBreast>1</maleNippleCountPerBreast>
+	<maleNippleCountPerBreast>1</maleNippleCountPerBreast><!-- 男性 -->
+	<femaleNippleCountPerBreast>1</femaleNippleCountPerBreast><!-- 女性 -->
 	<!-- 这个种族的乳房可以存储多少ml的奶,范围0到100000.这个值在哺乳期会自动增加,所以这个值应该一直为0,除非你希望这个种族不哺乳也泌乳
 	0               "无"
 	1~30 			"微量"
@@ -349,29 +360,20 @@
 	2001~10000		"极巨量"
 	10001~100000	"恐怖量"
 	-->
-	<maleLactationRate>0</maleLactationRate>
+	<maleLactationRate>0</maleLactationRate><!-- 男性 -->
+	<femaleLactationRate>0</femaleLactationRate><!-- 女性 -->
 	<!-- 乳穴容量 与上面肛门类似 = anusCapacity-->
-	<maleBreastCapacity>0</maleBreastCapacity>
+	<maleBreastCapacity>0</maleBreastCapacity><!-- 男性 -->
+	<femaleBreastCapacity>0</femaleBreastCapacity><!-- 女性 -->
 	<!-- 乳穴深度 与上面肛门类似 = anusDepth-->
-	<maleBreastDepth>2</maleBreastDepth>
+	<maleBreastDepth>2</maleBreastDepth><!-- 男性 -->
+	<femaleBreastDepth>2</femaleBreastDepth><!-- 女性 -->
 	<!-- 乳穴弹性 与上面肛门类似 = anusElasticity-->
-	<maleBreastElasticity>3</maleBreastElasticity>
+	<maleBreastElasticity>3</maleBreastElasticity><!-- 男性 -->
+	<femaleBreastElasticity>3</femaleBreastElasticity><!-- 女性 -->
 	<!-- 乳穴柔软的 与上面肛门类似 = anusPlasticity-->
-	<maleBreastPlasticity>3</maleBreastPlasticity>
-	
-	<!-- 女性胸部特征: -->
-	<femaleBreastSize>9</femaleBreastSize>
-	<femaleBreastRows>1</femaleBreastRows>
-	<femaleNippleSize>2</femaleNippleSize>
-	<femaleNippleShape>NORMAL</femaleNippleShape>
-	<femaleAreolaeSize>2</femaleAreolaeSize>
-	<femaleAreolaeShape>NORMAL</femaleAreolaeShape>
-	<femaleNippleCountPerBreast>1</femaleNippleCountPerBreast>
-	<femaleLactationRate>0</femaleLactationRate>
-	<femaleBreastCapacity>0</femaleBreastCapacity>
-	<femaleBreastDepth>2</femaleBreastDepth>
-	<femaleBreastElasticity>3</femaleBreastElasticity>
-	<femaleBreastPlasticity>3</femaleBreastPlasticity>
+	<maleBreastPlasticity>3</maleBreastPlasticity><!-- 男性 -->
+	<femaleBreastPlasticity>3</femaleBreastPlasticity><!-- 女性 -->
 	
 	
 	<!-- 腹乳特征: -->

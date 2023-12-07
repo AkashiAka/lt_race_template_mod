@@ -19,7 +19,8 @@
 	<tertiaryColour>innoxia_hyena</tertiaryColour>
 	
 	<!-- 这个亚种是否是这个种族的主要亚种
-	 	 除此之外，只有一个亚种，也填true-->
+	 	 除此之外，只有一个亚种，也填true
+		 主要种族只能有一个,如果多个亚种都为主要亚种,那么按id排序,第一个是主要亚种,往后的都不是-->
 	<mainSubspecies>true</mainSubspecies>
 
 	<!-- 被作为奴隶售卖的基础价格 -->
@@ -94,29 +95,39 @@
 	应用于race文件的“applyRaceChanges”方法之后
 	可以使用“targetedBody”访问正在更改的角色的身体
 	单亚种或不需要则留空-->
+	<!-- 这个代码含义是把覆盖的绒毛的样式换成斑点的
 	<applySubspeciesChanges><![CDATA[
 		[#targetedBody.setCoveringPattern(BODY_COVERING_TYPE_innoxia_hyena_fur, true, COVERING_PATTERN_SPOTTED)]
 		#IF(targetedBody.isFeminine())
 			[#targetedBody.setHeight(targetedBody.getHeightValue()*1.12)]
 		#ENDIF
-	]]></applySubspeciesChanges>
+	]]></applySubspeciesChanges> -->
+	<applySubspeciesChanges/>
 	
 	<!-- 这个条件语句确定一个身体是否被检测为该亚种的一个实例。
 	它应该返回一个整数值，如果提供的身体/种族不满足该亚种的要求，则返回0。
 	如果满足要求，你通常应该返回100的值，或者如果这个亚种比其他亚种有更高的优先级，则返回更高的值，其他亚种也可能检测到这个身体是他们亚种的一个实例。
-	可以使用“targetedBody”访问正在检查的正文。
-	不应通过targetedBody.getRace()访问正在检查的主体的种族，而应使用'targetedRace'访问。-->
+	targetedBody表示当前角色的身体,是Body类
+	targetedRace表示当前角色的种族
+	npc等GameCharacter类在这里不能用-->
 	<subspeciesWeighting><![CDATA[
-		#IF(targetedRace==RACE_innoxia_hyena)
-			#IF(targetedBody.getCoveringPattern(BODY_COVERING_TYPE_innoxia_hyena_fur, true)!=COVERING_PATTERN_STRIPED)
-				100
-			#ELSE
-				0
-			#ENDIF
+		#IF(targetedRace==RACE_author_raceName)
+			100
 		#ELSE
 			0
 		#ENDIF
 	]]></subspeciesWeighting>
+	<!-- 这是多亚种情况下的种族判定代码
+	大致意思是覆盖的绒毛的样式不为条纹时(作者就写了亮个:条纹与斑点,不是条纹那就是斑点)亚种权重为100
+	#IF(targetedRace==RACE_innoxia_hyena)
+		#IF(targetedBody.getCoveringPattern(BODY_COVERING_TYPE_innoxia_hyena_fur, true)!=COVERING_PATTERN_STRIPED)
+			100
+		#ELSE
+			0
+		#ENDIF
+	#ELSE
+		0
+	#ENDIF -->
 
 	<!-- 这个亚种的图标的名字，应该是同名文件夹下的svg文件
 	 	 displaySize是对文件的缩放 80 就是缩小到80%-->
@@ -221,6 +232,8 @@
 	</nameHalfDemon>
 
 	<!-- 兽化后的命名 -->
+	<!-- 这个写了书里就认为你的种族有兽化状态,如果没有兽化状态这里留空
+	<feralAttributes/> -->
 	<feralAttributes>
 		<!-- 由于兽化只能有一种配置的腿，因此没有必要基于“腿配置”属性来定义名称。 -->
 		<name><![CDATA[斑鬣狗]]></name>
