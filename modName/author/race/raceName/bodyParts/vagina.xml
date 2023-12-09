@@ -49,7 +49,7 @@
 	</defaultOrificeModifiers>
 
 	<!-- 当一个角色转变成这种阴道的时候的描述语句
-		<br/> 转变语句之后便是对这种触角的形容
+		<br/> 转变语句之后便是对这种阴道的形容
 		其中 <br/> 是换行符号
 		可以在<![CDATA[ ]]中使用解析指令
 		-->
@@ -61,7 +61,7 @@
 			<br/>[npc.Name]现在拥有[style.boldDragon(龙的阴道)]，[npc.pussyColourPrimary(true)]阴唇和[npc.pussyColourSecondary(true)]内壁。
 	]]></transformationDescription>
 
-	<!-- 角色的描述页面对阴茎的描述。 -->
+	<!-- 角色的描述页面对阴道的描述。 -->
 	<bodyDescription><![CDATA[
 		[npc.she]拥有#IF(npc.isPiercedVagina())一个打孔的#ELSE一个#ENDIF龙小穴，[npc.labiaSize]，[npc.pussyPrimaryColour(true)]被光滑鳞片覆盖的阴唇和[npc.pussySecondaryColour(true)]内壁。
 	]]></bodyDescription>
