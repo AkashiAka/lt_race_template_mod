@@ -42,9 +42,9 @@
 	-->
 	<flavour>GIRL_CUM</flavour>
 
-	<!-- 对男性的名称 -->
+	<!-- 对男性的名称  用<name>分隔-->
 	<namesMasculine/>
-	<!-- 对女性的名称 -->
+	<!-- 对女性的名称  用<name>分隔-->
 	<namesFeminine/>
 
 	<!-- 对男性的描述 -->
